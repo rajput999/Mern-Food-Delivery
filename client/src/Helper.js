@@ -1,1 +1,1 @@
-export const BASE_URL = "http://localhost:5000"
+export const BASE_URL = "https://foodbackend-8l69.onrender.com"
