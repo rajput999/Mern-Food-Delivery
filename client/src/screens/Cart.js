@@ -1,7 +1,7 @@
 import React from 'react'
 import Delete from '@material-ui/icons/Delete'
 import { useCart, useDispatchCart } from '../components/ContextReducer';
-const BASE_URL = process.env.BASE_URL
+import { BASE_URL } from '../Helper';
 export default function Cart() {
   let data = useCart();
   let dispatch = useDispatchCart();

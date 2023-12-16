@@ -3,13 +3,14 @@ import Card from '../components/Card'
 // import Carousel from '../components/Carousel'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-const BASE_URL = process.env.BASE_URL
+import { BASE_URL } from '../Helper'
 export default function Home() {
   const [foodCat, setFoodCat] = useState([])
   const [foodItems, setFoodItems] = useState([])
   const [search, setSearch] = useState('')
   const loadFoodItems = async () => {
-    let response = await fetch(`${BASE_URL}/api/auth/foodData`, {
+    // console.log(`${BASE_URL}/api/auth/foodData`)
+    let response = await fetch(`http://localhost:5000/api/auth/foodData`, {
       // credentials: 'include',
       // Origin:"http://localhost:3000/login",
       method: 'POST',
@@ -18,8 +19,9 @@ export default function Home() {
       }
 
     });
+    console.log(response)
     response = await response.json()
-    // console.log(response[1][0].CategoryName)
+    console.log("hik")
     setFoodItems(response[0])
     setFoodCat(response[1])
   }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
-const BASE_URL = process.env.BASE_URL
+import { BASE_URL } from '../Helper';
 
 export default function MyOrder() {
 
